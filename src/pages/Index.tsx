@@ -57,8 +57,8 @@ const Index = () => {
   };
 
   const validate = (): boolean => {
-    if (selectedStocks.length < 10) {
-      toast.error("Sélectionnez au moins 10 actions");
+    if (selectedStocks.length < 1) {
+      toast.error("Sélectionnez au moins 1 action");
       return false;
     }
     if (selectedStocks.length > 20) {
@@ -173,7 +173,7 @@ const Index = () => {
             {/* Stocks */}
             <Card className="glass-card p-4 animate-fade-in animate-fade-in-delay-2">
               <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                1. Sélection des actions (10–20)
+                1. Sélection des actions (max 20)
               </h2>
               <StockSelector selected={selectedStocks} onSelect={handleStocksChange} />
             </Card>

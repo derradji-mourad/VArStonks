@@ -104,7 +104,7 @@ const StockSelector = ({ selected, onSelect, maxStocks = 20 }: StockSelectorProp
       </ScrollArea>
 
       <p className="text-xs text-muted-foreground">
-        {selected.length}/20 actions sélectionnées (min. 10)
+        {selected.length}/20 actions sélectionnées (min. 1)
       </p>
     </div>
   );

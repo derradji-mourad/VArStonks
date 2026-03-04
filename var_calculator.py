@@ -55,8 +55,8 @@ def var_historical_1d(tickers, weights, invested_amount, var_quantile, start_dat
     universe = universe.strip().upper()
 
     # 2) Vérifications (simples)
-    if not (10 <= len(tickers) <= 20):
-        raise ValueError("Il faut entre 10 et 20 tickers.")
+    if not (1 <= len(tickers) <= 20):
+        raise ValueError("Il faut au moins 1 ticker (max 20).")
 
     if len(weights) != len(tickers):
         raise ValueError("weights doit avoir la même taille que tickers.")
