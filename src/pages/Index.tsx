@@ -12,7 +12,7 @@ import VarResults, { VarResultData } from "@/components/VarResults";
 import { Stock } from "@/data/stocks";
 import { toast } from "sonner";
 
-const UNIVERSE_OPTIONS = ["CAC40", "SP500", "EUROSTOXX50", "SBF120"] as const;
+const UNIVERSE_OPTIONS = ["CAC40", "SP500", "EUROSTOXX50", "SBF120", "MIXED"] as const;
 
 const Index = () => {
   const [selectedStocks, setSelectedStocks] = useState<Stock[]>([]);
@@ -160,8 +160,8 @@ const Index = () => {
                     key={u}
                     onClick={() => setUniverse(u)}
                     className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${universe === u
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
                       }`}
                   >
                     {u}
